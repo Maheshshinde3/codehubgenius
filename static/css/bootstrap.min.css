@@ -606,8 +606,8 @@ progress {
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto
+        height: 269px;
+        width: 100%;
 }
 
 .img-thumbnail {
@@ -12603,3 +12603,28 @@ fieldset:disabled .btn {
         display: none !important
     }
 }
+.stats {
+    display: flex;              /* makes items side by side */
+    gap: 134px;                  /* space between items */
+    padding: 0 0;
+    justify-content: space-evenly;
+}
+
+.stat-item {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+/* @media (max-width: 600px) {
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+} */
