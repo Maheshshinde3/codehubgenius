@@ -1,88 +1,13 @@
+{% extends 'base.html' %}
 {%load static%}
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>codehubgenius - Youtube Channel</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="{% static 'img/favicon.ico' %} " rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-    <!-- Spinner End -->
 
 
-    <!-- Header Start -->
-    <div class="container-fluid p-0" id="Header">
-        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>codehubgenius</h2>
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto p-4 p-lg-0">
-                    <a href="#Header" class="nav-item nav-link active">Home</a>
-                    <a href="#About" class="nav-item nav-link">About</a>
-                    <a href="#Playlists" class="nav-item nav-link">Playlists</a>
-                    <div class="nav-item dropdown">
-                        <a href="#QuizZone" class="nav-item nav-link">QuizZone</a>
+{% block content %}
 
-                        {% comment %} var class madhi hi link hoti-nav-link dropdown-toggle {% endcomment %}
-                        {% comment %} <div class="dropdown-menu m-0">
-                            <a href="team.html" class="dropdown-item">Our Models</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div> {% endcomment %}
-                    </div>
-                    <a href="#Followus" class="nav-item nav-link">Follow Us</a>
-                </div>
-                {% comment %} <div class="d-none d-lg-flex">
-                    <a class="btn btn-outline-primary border-2" href="https://themewagon.com/themes/poseify">Download
-                        Now</a>
-                </div> {% endcomment %}
-            </div>
-        </nav>
-
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Head Img. Start -->
+     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="{% static 'img/nbackground1.png'%}" alt="Image">
@@ -97,7 +22,7 @@
 <br> ᴸᵉᵃʳⁿ ᶠᵃˢᵗ, ᶜᵒᵈᵉ ˢᵐᵃʳᵗ
 <br>ᵀᵉᶜʰ ⁱⁿˢⁱᵍʰᵗˢ ⁱⁿ ᵃ ᶠˡᵃˢʰ⚡
 <br>ᴵⁿⁿᵒᵛᵃᵗᵉ | ᴱᵈᵘᶜᵃᵗᵉ | ᴱˡᵉᵛᵃᵗᵉ</p>
-                        <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
+                        <a href="#About" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
                             More</a>
                     </div>
                 </div>
@@ -114,7 +39,7 @@
 <br> ᴸᵉᵃʳⁿ ᶠᵃˢᵗ, ᶜᵒᵈᵉ ˢᵐᵃʳᵗ
 <br>ᵀᵉᶜʰ ⁱⁿˢⁱᵍʰᵗˢ ⁱⁿ ᵃ ᶠˡᵃˢʰ⚡
 <br>ᴵⁿⁿᵒᵛᵃᵗᵉ | ᴱᵈᵘᶜᵃᵗᵉ | ᴱˡᵉᵛᵃᵗᵉ</p>
-                        <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
+                        <a href="#About" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
                             More</a>
                     </div>
                 </div>
@@ -128,12 +53,10 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
-    <!-- Header End -->
 
-
+    
     <!-- About Start -->
-    <div class="container-fluid bg-secondary" id="About">
+    <div class="container-fluid bg-secondary scrolling" id="About">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-7 pb-0 pb-lg-5 py-5">
@@ -165,7 +88,7 @@
                                 <a href="#!" class="btn btn-outline-primary border-2 py-3 w-100">Become A Model</a>
                             </div> {% endcomment %}
                             <div class="col-6">
-                                <a href="#!" class="btn btn-primary py-3 w-100">Visit to Our Channel</a>
+                                <a href="https://youtube.com/@codehubgenius?si=ELLHTYGPBxZlrbeM" target="_blank" class="btn btn-primary py-3 w-100">Visit to Our Channel</a>
                             </div>
                         </div>
                     </div>
@@ -179,8 +102,8 @@
     <!-- About End -->
 
 
-    <!-- Service Start -->
-    <div class="container-fluid py-5" id="Playlists">
+    <!-- Playlists Start -->
+    <div class="container-fluid py-5 scrolling" id="Playlists">
         <div class="container py-5">
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -201,7 +124,7 @@
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Computer Networks</h3>
                             <p class="mb-4">Welcome to your go-to playlist for quick and effective learning in computer networking! Each short video is designed to break down complex networking concepts into simple, easy-to-understand explanations. Whether you're a student, beginner, or just refreshing your knowledge, these videos will help you build a solid foundation without overwhelming you. Learn at your own pace, anytime and anywhere — one short at a time!</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Explore Playlist<i
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EvnYydlaQx0HiL3kNlPsKMK&si=asW7nHONc3HLE7T-" target="_blank">Explore Playlist<i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -219,7 +142,7 @@
                             <h3 class="text-uppercase">Python Programming</h3>
                             <p class="mb-4">Learn Python in Just 15-30 Seconds! 🚀
 This playlist breaks down Python course topics into short, easy-to-understand videos, each lasting just 15 to 30 seconds. Whether you're a beginner or revisiting concepts, these concise lessons help you grasp Python quickly and efficiently. No unnecessary details—just clear and to-the-point explanations.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Explore Playlist<i
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EsdLs1NHEy0u_w1XKQswesD&si=oB7MJx5GeekvdbAC" target="_blank">Explore Playlist<i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -237,7 +160,7 @@ This playlist breaks down Python course topics into short, easy-to-understand vi
                             <h3 class="text-uppercase">Artificial Intelligence</h3>
                             <p class="mb-4">Dive into the world of Artificial Intelligence (AI) with short, easy-to-understand videos that explain each concept in just seconds. From simple ideas to deeper insights, every short helps you understand how intelligence is built, learned, and applied in technology.
 Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Explore Playlist<i
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EuCd0eRATBClB9PkbMIxs-p&si=HyaXL1zd2m4JMGyH" target="_blank">Explore Playlist<i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
@@ -268,8 +191,8 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
     <!-- Service End -->
 
 
-    <!-- Banner Start -->
-    <div class="container-fluid py-5 bg-secondary" id="QuizZone">
+    <!-- QuziZone Start -->
+    <div class="container-fluid py-5 bg-secondary scrolling" id="QuizZone">
         <div class="container py-5">
             <div class="row g-0 justify-content-center">
                 <div class="col-lg-7 text-center">
@@ -283,8 +206,8 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
                     <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
                         {% comment %} <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
                             placeholder="Your email"> {% endcomment %}
-                        <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
-                            style="margin-top: 7px;">Start Quiz</button>
+                       <a href="#"> <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
+                            style="margin-top: 7px;">Start Quiz</button> </a>
                     </div>
                 </div>
             </div>
@@ -292,9 +215,11 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
     </div>
     <!-- Banner End -->
 
+ <!-- Overview  -->
 
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
+ <div class="scrolling" id="Overview">
+    <!-- Few loved shorts  -->
+    <div class="container-fluid py-5 ">
         <div class="container py-5">
             <div class="text-center">
                 <div class="title wow fadeInUp" data-wow-delay="0.1s">
@@ -311,11 +236,15 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
                             <div class="team-before">
                                 <span>Views : </span>
                                 <span>Likes : </span>
+                                  <span>Clip : </span>
+
                             </div>
                             <img class="img-fluid" src="https://img.youtube.com/vi/k8j97OF1-nA/hqdefault.jpg" alt="">
                             <div class="team-after"> 
                                 <span>13,000+</span>
                                 <span>110+</span>
+                               <a href="https://youtu.be/k8j97OF1-nA?si=29ayNspYWXtpEDOn" target="_blank"> <button class="playbutton" >play</button></a>
+
                             </div>
                         </div>
                         <a class="team-name" href="#">
@@ -329,11 +258,13 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
                             <div class="team-before">
                                  <span>Views : </span>
                                 <span>Likes : </span>
+                                <span>Clip : </span>
                             </div>
                             <img class="img-fluid" src="https://img.youtube.com/vi/diMGS8K_kBs/hqdefault.jpg" alt="">
                             <div class="team-after">
                                 <span>12,000+</span>
                                 <span>170+</span>
+                                <a href="https://youtu.be/diMGS8K_kBs?si=8OKsubIEF663K0uJ " target="_blank"> <button class="playbutton" >play</button></a>
                             </div>
                         </div>
                         <a class="team-name" href="#">
@@ -347,11 +278,13 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
                             <div class="team-before">
                                 <span>Views : </span>
                                 <span>Likes : </span>
+                                <span>Clip : </span>
                             </div>
                             <img class="img-fluid" src="https://img.youtube.com/vi/Qj0tkBDM0tA/hqdefault.jpg" alt="">
                             <div class="team-after">
                                 <span>12,000+</span>
                                 <span>250+</span>
+                                <a href="https://youtu.be/Qj0tkBDM0tA?si=pVUX1vxILRh78Uxz" target="_blank"> <button class="playbutton" >play</button></a>
                             </div>
                         </div>
                         <a class="team-name" href="#">
@@ -365,11 +298,13 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
                             <div class="team-before">
                                <span>Views : </span>
                                <span>Likes : </span>
+                               <span>Clip : </span>
                             </div>
                             <img class="img-fluid" src="https://img.youtube.com/vi/yyVnctsgaeE/hqdefault.jpg" alt="">
                             <div class="team-after">
                                 <span>12,000+</span>
                                 <span>150+</span>
+                                <a href="https://youtu.be/yyVnctsgaeE?si=sM4Bby1EjwNIK0lI" target="_blank"> <button class="playbutton" >play</button></a>
                                
                             </div>
                         </div>
@@ -488,7 +423,7 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
+    <!-- channel Performance-->
     <div class="container-fluid py-5 bg-secondary">
         <div class="container py-5">
             <div class="text-center">
@@ -503,6 +438,7 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
     <div class="stat-item">2 Lakh+<br><span>Views</span></div>
     <div class="stat-item">3000+<br><span>Likes</span></div>
     <div class="stat-item">400+<br><span>Subscribers</span></div>
+</div>
 </div>
 
 
@@ -541,31 +477,7 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
     <!-- Testimonial End -->
 
 
-    <!-- Footer Start -->
-    {% comment %} <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s"> {% endcomment %}
-        <div class="container text-center py-5" id="Followus">
-            <a href="index.html">
-                <h1 class="display-4 mb-3 text-white text-uppercase"><i
-                        class="fa-regular fa-face-smile me-1"></i>codehubgenius</h1>
-            </a>
-            <div class="d-flex justify-content-center mb-4">
-                {% comment %} <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-facebook-f"></i></a> {% endcomment %}
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-youtube"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#!"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; <a class="border-bottom" href="#">codehubgenius</a>, All Right Reserved.</p>
-
-            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-            <p class="mb-0">Designed By <a class="border-bottom" href="https://htmlcodex.com">Mahesh Shinde</a>. Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>.</p>
-        </div>
-    </div>
-    <!-- Footer End -->
+  
 
 
     <!-- Back to Top -->
@@ -583,6 +495,6 @@ Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
-</body>
+    <script src ="{% static 'js/navigation.js' %}"></script>
 
-</html>
+    {% endblock  %}

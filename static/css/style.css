@@ -10,14 +10,14 @@
 
 
 /*** Spinner ***/
-#spinner {
+.spin {
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
 }
 
-#spinner.show {
+.spin.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
@@ -423,4 +423,57 @@
     font-size: 16px;
     font-weight: 400;
     opacity: 0.8;
+}
+
+.my-active{
+    color: rgb(255, 0, 128);
+}
+
+.playbutton{
+font-weight: 600;
+    transition: .5s;
+    border-radius: 50px;
+    width: 70px;
+    background-color: rgb(182, 235, 38);
+}
+
+
+
+.question-container{
+    width: 700px; 
+}
+.inbetweenquestion {
+    margin-bottom: 25px;
+    margin-top: 43px;
+
+}
+
+.question-text {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.options {
+    margin-left: 15px;
+}
+
+.option-item {
+    display: block;          /* one option per line */
+    font-size: 14px;         /* smaller font */
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.option-item input {
+    margin-right: 6px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.upsidespacing{
+    margin-top: 23px;
 }
