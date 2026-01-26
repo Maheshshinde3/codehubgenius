@@ -17,30 +17,77 @@ def showfile(request):
 
 def Quiz(request):
 
+# Fetch random ids of questions
+    if 'quiz_questions' in request.session:
+        random_ids = request.session['quiz_questions']
+    
+    else:
+        QUESTION_COUNT = 7
+        all_ids = list(Question.objects.values_list('id', flat=True))
+    
+        if len(all_ids) < QUESTION_COUNT:
+            QUESTION_COUNT = len(all_ids)
 
-# Gettinng Questions and options from database
-    QUESTION_COUNT = 7
-    # Step 1: taken all id's list. first try with direct random.sample method but it gives only one number as output eg.55
-    ids = list(Question.objects.values_list('id', flat=True))
+        random_ids = random.sample(all_ids, QUESTION_COUNT)
+        request.session['quiz_questions'] = random_ids
 
-    # for Safety check == if no. of question are less than question count ie.7 later fetch all question
-    if len(ids) < QUESTION_COUNT:
-        QUESTION_COUNT = len(ids)
-      
-    # Step 2: Pick random IDs
-    random_ids = random.sample(ids, QUESTION_COUNT)
 
-    # Step 3: Fetch questions + options efficiently
+    # # Fetch questions + options efficiently
     questions = (
         Question.objects
         .filter(id__in=random_ids)
         .prefetch_related('Option')
     )
+    print(questions)
     
+    score = 0
+    total = questions.count()
+    result = None
+    correct_answers = {}
 
+    # Checked weather the selected options are correct or not 
+    if request.method == 'POST':
+        for question in questions:
 
+            #get selected options
+            selected_option_id = request.POST.get(f"question_{question.id}")
 
+            if selected_option_id:
+                try:
+                    #if selected options are correct increase score
+                    optionvalue = Option.objects.get(id=selected_option_id, question=question)
+                    print("selected value is ",optionvalue)
+                    if optionvalue.is_correct:
+                        score += 1
+                except:
+                    Option.DoesNotExist
+            
+            #get all Truly correct options
+            correct_option = Option.objects.filter(
+                question = question,
+                is_correct = True
+                ).first()
+            print("Correct options are", correct_option)
+            print("Score is",score)
+
+            # Get just user selected correct answers. to show user which options he selected correctly.
+            question.correct_answer = (
+            correct_option.text if correct_option else None
+            )
+
+        #Stored result in dictionary
+        result = {
+            "score": score, #Stored score of user
+            "total": total  #Stored total no. of questions or score
+        }
+
+        # clear quiz after submission
+        request.session.pop('quiz_questions', None)          
+
+    return render(request, "QuizZone.html", {
+        "questions": questions,
+        "result": result,
+    })
+    # return render(request, "QuizZone.html", {"questions": questions})
     
-    # Send to template
-    return render(request, "QuizZone.html", {"questions": questions})
    

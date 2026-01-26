@@ -606,7 +606,6 @@ progress {
 }
 
 .img-fluid {
-        height: 269px;
         width: 100%;
 }
 
@@ -7261,6 +7260,7 @@ fieldset:disabled .btn {
 
 .position-absolute {
     position: absolute !important
+    
 }
 
 .position-fixed {
@@ -7821,9 +7821,9 @@ fieldset:disabled .btn {
     margin-right: .25rem !important
 }
 
-.me-2 {
+/* .me-2 {
     margin-right: 16.5rem !important
-}
+} */
 
 .me-3 {
     margin-right: 1rem !important
