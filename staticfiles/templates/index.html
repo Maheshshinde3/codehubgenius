@@ -1,0 +1,500 @@
+{% extends 'base.html' %}
+{%load static%}
+
+
+
+
+{% block content %}
+
+    <!-- Head Img. Start -->
+     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/nbackground1.png'%}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>Welcome to</h5>
+                                <h1 class="display-1">codehubgenius</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">ᴱˣᵖˡᵒʳⁱⁿᵍ ᵗʰᵉ ʷᵒʳˡᵈ ᵒᶠ ᵗᵉᶜʰ ⁱⁿ ʲᵘˢᵗ ⁶⁰⏲️ ˢᵉᶜᵒⁿᵈˢ  
+<br> ᴸᵉᵃʳⁿ ᶠᵃˢᵗ, ᶜᵒᵈᵉ ˢᵐᵃʳᵗ
+<br>ᵀᵉᶜʰ ⁱⁿˢⁱᵍʰᵗˢ ⁱⁿ ᵃ ᶠˡᵃˢʰ⚡
+<br>ᴵⁿⁿᵒᵛᵃᵗᵉ | ᴱᵈᵘᶜᵃᵗᵉ | ᴱˡᵉᵛᵃᵗᵉ</p>
+                        <a href="#About" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
+                            More</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/nbackground2.png'%}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="title mx-5 px-5 animated slideInDown">
+                            <div class="title-center">
+                                <h5>Welcome to</h5>
+                                <h1 class="display-1">codehubgenius</h1>
+                            </div>
+                        </div>
+                        <p class="fs-5 mb-5 animated slideInDown">ᴱˣᵖˡᵒʳⁱⁿᵍ ᵗʰᵉ ʷᵒʳˡᵈ ᵒᶠ ᵗᵉᶜʰ ⁱⁿ ʲᵘˢᵗ ⁶⁰⏲️ ˢᵉᶜᵒⁿᵈˢ  
+<br> ᴸᵉᵃʳⁿ ᶠᵃˢᵗ, ᶜᵒᵈᵉ ˢᵐᵃʳᵗ
+<br>ᵀᵉᶜʰ ⁱⁿˢⁱᵍʰᵗˢ ⁱⁿ ᵃ ᶠˡᵃˢʰ⚡
+<br>ᴵⁿⁿᵒᵛᵃᵗᵉ | ᴱᵈᵘᶜᵃᵗᵉ | ᴱˡᵉᵛᵃᵗᵉ</p>
+                        <a href="#About" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary scrolling" id="About">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-7 pb-0 pb-lg-5 py-5">
+                    <div class="pb-0 pb-lg-5 py-5">
+                        <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="title-left">
+                                <h5>More</h5>
+                                <h1>About Us</h1>
+                            </div>
+                        </div>
+                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">CodeHubGenius is a YouTube channel focused on explaining computer-related subjects through short, clear, and practical videos. The content is organized into well-structured playlists covering areas such as Python, Computer Networks, and other core technical topics, making it easy to learn and revise concepts quickly. Each short video explains one concept at a time, helping viewers build strong fundamentals without unnecessary complexity. CodeHubGenius is dedicated to making technical learning simple, accessible, and effective through concise educational short content.</p>
+                        {% comment %} <ul class="list-group list-group-flush mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-1"></i> Lorem ipsum dolor sit amet
+                                consectetur elit.
+                            </li>
+                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-1"></i> Donec vehicula, sem ut tempus
+                                tempus.
+                            </li>
+                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
+                                <i class="fa fa-check-circle text-primary me-1"></i> Morbi mi dapibus, feugiat nisi non
+                                mollis justo.
+                            </li>
+                        </ul> {% endcomment %}
+                        <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                            {% comment %} become a model button {% endcomment %}
+                            {% comment %} <div class="col-6">
+                                <a href="#!" class="btn btn-outline-primary border-2 py-3 w-100">Become A Model</a>
+                            </div> {% endcomment %}
+                            <div class="col-6">
+                                <a href="https://youtube.com/@codehubgenius?si=ELLHTYGPBxZlrbeM" target="_blank" class="btn btn-primary py-3 w-100">Visit to Our Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <img class="img-fluid" src="{% static 'img/mobile.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Playlists Start -->
+    <div class="container-fluid py-5 scrolling" id="Playlists">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Our</h5>
+                        <h1>Featured Playlists</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-left">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/computernetworks.png'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Computer Networks</h3>
+                            <p class="mb-4">Welcome to your go-to playlist for quick and effective learning in computer networking! Each short video is designed to break down complex networking concepts into simple, easy-to-understand explanations. Whether you're a student, beginner, or just refreshing your knowledge, these videos will help you build a solid foundation without overwhelming you. Learn at your own pace, anytime and anywhere — one short at a time!</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EvnYydlaQx0HiL3kNlPsKMK&si=asW7nHONc3HLE7T-" target="_blank">Explore Playlist<i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-right">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/python3.png'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Python Programming</h3>
+                            <p class="mb-4">Learn Python in Just 15-30 Seconds! 🚀
+This playlist breaks down Python course topics into short, easy-to-understand videos, each lasting just 15 to 30 seconds. Whether you're a beginner or revisiting concepts, these concise lessons help you grasp Python quickly and efficiently. No unnecessary details—just clear and to-the-point explanations.</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EsdLs1NHEy0u_w1XKQswesD&si=oB7MJx5GeekvdbAC" target="_blank">Explore Playlist<i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item service-item-left">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/artificialintelligence.png'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Artificial Intelligence</h3>
+                            <p class="mb-4">Dive into the world of Artificial Intelligence (AI) with short, easy-to-understand videos that explain each concept in just seconds. From simple ideas to deeper insights, every short helps you understand how intelligence is built, learned, and applied in technology.
+Stay curious, keep exploring, and discover AI the simple way! 🤖</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="https://youtube.com/playlist?list=PLFM9aI7Qc9EuCd0eRATBClB9PkbMIxs-p&si=HyaXL1zd2m4JMGyH" target="_blank">Explore Playlist<i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% comment %} <div class="service-item service-item-right">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 order-md-1 text-md-end">
+                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img class="img-fluid rounded-circle" src="{% static 'img/service-4.jpg'%}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                            <h3 class="text-uppercase">Professional Modeling</h3>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
+                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
+                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
+                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
+                                    class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- QuziZone Start -->
+    <div class="container-fluid py-5 bg-secondary scrolling" id="QuizZone">
+        <div class="container py-5">
+            <div class="row g-0 justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-center">
+                            <h5>Smart</h5>
+                            <h1>Quiz Zone</h1>
+                        </div>
+                    </div>
+                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">This quiz is designed only to help you check and improve your knowledge. It is created purely for learning and self-assessment purposes, allowing you to understand concepts better and identify areas where you can improve. This quiz is not an official test and does not represent any formal evaluation.</p>
+                    <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
+                        {% comment %} <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
+                            placeholder="Your email"> {% endcomment %}
+                       <a href="QuizZone/"> <button type="button" class="btn btn-primary py-3 px-4 centeredpositioning top-0 end-0 me-2"
+                            style="margin-top: 7px;">Start Quiz</button> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+ <!-- Overview  -->
+
+ <div class="scrolling" id="Overview">
+    <!-- Few loved shorts  -->
+    <div class="container-fluid py-5 ">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>A Few</h5>
+                        <h1>Loved Shorts</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Views : </span>
+                                <span>Likes : </span>
+                                  <span>Clip : </span>
+
+                            </div>
+                            <img class="img-fluid" src="https://img.youtube.com/vi/k8j97OF1-nA/hqdefault.jpg" alt="">
+                            <div class="team-after"> 
+                                <span>13,000+</span>
+                                <span>110+</span>
+                               <a href="https://youtu.be/k8j97OF1-nA?si=29ayNspYWXtpEDOn" target="_blank"> <button class="playbutton" >play</button></a>
+
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Twisted Pair Cable</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                 <span>Views : </span>
+                                <span>Likes : </span>
+                                <span>Clip : </span>
+                            </div>
+                            <img class="img-fluid" src="https://img.youtube.com/vi/diMGS8K_kBs/hqdefault.jpg" alt="">
+                            <div class="team-after">
+                                <span>12,000+</span>
+                                <span>170+</span>
+                                <a href="https://youtu.be/diMGS8K_kBs?si=8OKsubIEF663K0uJ " target="_blank"> <button class="playbutton" >play</button></a>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Multiplexing</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Views : </span>
+                                <span>Likes : </span>
+                                <span>Clip : </span>
+                            </div>
+                            <img class="img-fluid" src="https://img.youtube.com/vi/Qj0tkBDM0tA/hqdefault.jpg" alt="">
+                            <div class="team-after">
+                                <span>12,000+</span>
+                                <span>250+</span>
+                                <a href="https://youtu.be/Qj0tkBDM0tA?si=pVUX1vxILRh78Uxz" target="_blank"> <button class="playbutton" >play</button></a>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">CSMA/CD</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                               <span>Views : </span>
+                               <span>Likes : </span>
+                               <span>Clip : </span>
+                            </div>
+                            <img class="img-fluid" src="https://img.youtube.com/vi/yyVnctsgaeE/hqdefault.jpg" alt="">
+                            <div class="team-after">
+                                <span>12,000+</span>
+                                <span>150+</span>
+                                <a href="https://youtu.be/yyVnctsgaeE?si=sM4Bby1EjwNIK0lI" target="_blank"> <button class="playbutton" >play</button></a>
+                               
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Coaxial Cable</h5>
+                        </a>
+                    </div>
+                </div>
+                {% comment %} <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/team-5.jpg'%}" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Naomy Olsen</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/team-6.jpg'%}" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Pamela Torney</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/team-7.jpg' %}" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Joanne Irwin</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="team-body">
+                            <div class="team-before">
+                                <span>Age</span>
+                                <span>Height</span>
+                                <span>Weight</span>
+                                <span>Bust</span>
+                                <span>Waist</span>
+                                <span>Hips</span>
+                            </div>
+                            <img class="img-fluid" src="{% static 'img/team-8.jpg'%}" alt="">
+                            <div class="team-after">
+                                <span>22</span>
+                                <span>185</span>
+                                <span>55</span>
+                                <span>79</span>
+                                <span>59</span>
+                                <span>89</span>
+                            </div>
+                        </div>
+                        <a class="team-name" href="#">
+                            <h5 class="text-uppercase mb-0">Gillian Rowe</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>{% endcomment %}
+        </div> 
+    </div>
+    <!-- Team End -->
+
+
+    <!-- channel Performance-->
+    <div class="container-fluid py-5 bg-secondary">
+        <div class="container py-5">
+            <div class="text-center">
+                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5>Setting New Benchmarks</h5>
+                        <h1>Channel Performance</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+    <div class="stat-item">2 Lakh+<br><span>Views</span></div>
+    <div class="stat-item">3000+<br><span>Likes</span></div>
+    <div class="stat-item">400+<br><span>Subscribers</span></div>
+</div>
+</div>
+
+
+
+
+
+
+            {% comment %} <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='{% static 'img/testimonial-1.jpg'%}' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed
+                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum
+                        justo sea clita.</p>
+                    <h5 class="text-uppercase">Joanne Irwin</h5>
+                    <span class="text-primary">Profession</span>
+                </div>
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='{% static 'img/testimonial-2.jpg'%}' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed
+                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum
+                        justo sea clita.</p>
+                    <h5 class="text-uppercase">Lana Anderson</h5>
+                    <span class="text-primary">Profession</span>'
+                </div>
+                <div class="testimonial-item text-center"
+                    data-dot="<img class='img-fluid' src='{% static 'img/testimonial-3.jpg'%}' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed
+                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum
+                        justo sea clita.</p>
+                    <h5 class="text-uppercase">Pamela Torney</h5>
+                    <span class="text-primary">Profession</span>
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+  
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src ="{% static 'js/navigation.js' %}"></script>
+
+    {% endblock  %}
