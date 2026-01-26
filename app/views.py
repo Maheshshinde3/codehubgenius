@@ -38,7 +38,7 @@ def Quiz(request):
         .filter(id__in=random_ids)
         .prefetch_related('Option')
     )
-    print(questions)
+   
     
     score = 0
     total = questions.count()
@@ -56,7 +56,6 @@ def Quiz(request):
                 try:
                     #if selected options are correct increase score
                     optionvalue = Option.objects.get(id=selected_option_id, question=question)
-                    print("selected value is ",optionvalue)
                     if optionvalue.is_correct:
                         score += 1
                 except:
@@ -67,8 +66,6 @@ def Quiz(request):
                 question = question,
                 is_correct = True
                 ).first()
-            print("Correct options are", correct_option)
-            print("Score is",score)
 
             # Get just user selected correct answers. to show user which options he selected correctly.
             question.correct_answer = (
