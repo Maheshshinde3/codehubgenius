@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-d-4$9xh-1(v1&!ho16w0sxqwj_@=2@#95lf))(52as^8=#a^3@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['codehubgenius.onrender.com'] 
 
 
 # Application definition
@@ -87,9 +87,7 @@ WSGI_APPLICATION = 'codehubgen.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': dj_database_url.parse(os.environ.get("postgresql://codehubgendb_user:y3AmjrqJJue48gpVe7hQ6Xnv6U270jLZ@dpg-d5rjobvpm1nc739f4f1g-a/codehubgendb"))
 }
 
 
