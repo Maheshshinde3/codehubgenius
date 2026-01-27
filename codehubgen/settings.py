@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d-4$9xh-1(v1&!ho16w0sxqwj_@=2@#95lf))(52as^8=#a^3@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*'] 
 
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'codehubgen.urls'
@@ -80,15 +80,15 @@ WSGI_APPLICATION = 'codehubgen.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("postgresql://codehubgendb_user:y3AmjrqJJue48gpVe7hQ6Xnv6U270jLZ@dpg-d5rjobvpm1nc739f4f1g-a/codehubgendb"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get("postgresql://codehubgendb_user:y3AmjrqJJue48gpVe7hQ6Xnv6U270jLZ@dpg-d5rjobvpm1nc739f4f1g-a/codehubgendb"))
+# }
 
 
 # Password validation
@@ -131,6 +131,6 @@ STATICFILES_DIRS = [
     BASE_DIR,"static"
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
